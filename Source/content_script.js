@@ -36,6 +36,11 @@ function handleText(textNode)
 {
 	var v = textNode.nodeValue;
 
+	// v = v.replace(/\bEnterprise Solution\b/g, "Crappy Solution");
+	// v = v.replace(/\bEnterprise solution\b/g, "Crappy solution");
+	// v = v.replace(/\benterprise Solution\b/g, "crappy Solution");
+	// v = v.replace(/\benterprise solution\b/g, "crappy solution");
+
 	v = v.replace(/\bThe Cloud\b/g, "My Butt");
 	v = v.replace(/\bThe cloud\b/g, "My butt");
 	v = v.replace(/\bthe Cloud\b/g, "my Butt");
@@ -43,5 +48,22 @@ function handleText(textNode)
 	
 	textNode.nodeValue = v;
 }
+
+// function matchCase(text, pattern) {
+//     var result = '';
+// 
+//     for(var i = 0; i < text.length; i++) {
+//         var c = text.charAt(i);
+//         var p = pattern.charCodeAt(i);
+// 
+//         if(p >= 65 && p < 65 + 26) {
+//             result += c.toUpperCase();
+//         } else {
+//             result += c.toLowerCase();
+//         }
+//     }
+// 
+//     return result;
+// }
 
 
